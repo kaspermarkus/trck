@@ -1,0 +1,112 @@
+.button {
+    background-color: lightseagreen;
+    font-size: 20px;
+    border-radius: 70px;
+    height: 100px;
+    width: 200px;
+    cursor: pointer;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.tabsArea .tab:hover {
+    cursor: pointer;
+}
+
+.tabsArea .tab {
+    display: inline;
+}
+
+.tabsArea .tab button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 60px;
+    font-weight: 800;
+    text-align: left;
+
+    border: 3px #000 solid;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.tabsArea .tab.selected button {
+    border-bottom: 0px;
+    background-color: #fff;
+}
+
+.tabsArea .icon {
+    position: absolute;
+    position: absolute;
+    font-size: 34px;
+    top: 9px;
+    padding-left: 10px;
+}
+
+.mainArea {
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+}
+
+.recordListingArea h3.date {
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+.recordListingArea h2.month {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.recordListingArea .listingEntry {
+    font-weight: bold;
+    margin-left: 45px;
+}
+
+.recordListingArea .listingEntry:hover {
+    background-color: #EEFFEE;
+}
+
+.recordListingArea span.timerange {
+    padding-right: 5px;
+    color: #444;
+}
+
+.recordListingArea span.timediff {
+    color: #bb6a6a;
+    font-weight: 300;
+}
+
+.recordListingArea span.category {
+    padding-left: 10px;
+
+}
+.recordListingArea font.project {
+    text-transform: uppercase;
+    color: #000077;
+}
+
+.recordListingArea font.task {
+    color: #0066AA;
+}
+
+.recordListingArea font.subtask {
+    color: #4cab73;
+}
+
+.recordListingArea span.description {
+    color: #228055;
+    font-weight: 200;
+}
+
+.recordListingArea span.editButton {
+    float: right;
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+.recordListingArea span.editButton:hover {
+    cursor: pointer;
+}
