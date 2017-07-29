@@ -9,7 +9,7 @@ import ManualTracking from './pages/ManualTracking.jsx'
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Trck} >
-      <IndexRedirect to="/liveTracking" />
+      <IndexRedirect to="/live" />
       <Route path="/live" component={LiveTracking} />
       <Route path="/list" component={RecordListing} />
       <Route path="/manual" component={ManualTracking} />ß
