@@ -11,7 +11,7 @@ export default React.createClass({
       return (
           <div className={(this.props.currentTab === this.props.tabName ? "selected " : "") + "tab " + this.props.tabName} onClick={this.handleClick}>
             <span className={"icon glyphicon glyphicon-"+this.props.glyphicon} aria-hidden="true" />
-            <button className="">{this.props.tabName}</button>
+            <button className="">{this.props.text}</button>
           </div>
       )
   }

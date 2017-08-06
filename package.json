@@ -12,6 +12,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.24.1",
     "electron": "~1.7.5",
+    "electron-canvas-to-buffer": "^2.0.0",
     "moment": "^2.18.1",
     "rc-time-picker": "^2.4.1",
     "react": "^15.6.1",
@@ -23,6 +24,8 @@
     "react-select": "^1.0.0-rc.3"
   },
   "devDependencies": {
-    "electron": "~1.7.5"
+    "electron": "~1.7.5",
+    "electron-inspector": "^0.1.4",
+    "electron-rebuild": "^1.5.11"
   }
 }

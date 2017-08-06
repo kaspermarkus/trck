@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 
 import TaskSelector from "../components/TaskSelector"
 import moment from 'moment'
+import utils from '../Utils'
 
 class LiveTracking extends React.Component {
   render () {
@@ -58,19 +59,11 @@ class ViewTracking extends React.Component {
     };
   };
 
-  zeroPrefix (num) {
-    return num < 10 ? "0" + num : num;
-  };
-
   updateTimeSpent () {
-    var diff = (Date.now() - this.props.getSystemState().currentTracking.startTime) / 1000;
-    var hh = Math.floor(diff / 60 / 60);
-    diff -= hh * 60 * 60;
-    var mm = Math.floor(diff / 60);
-    diff -= mm  * 60;
-    var ss = Math.floor(diff);
+    var startTime = this.props.getSystemState().currentTracking.startTime;
+    var newTimeString = utils.timeSpent(startTime, moment().valueOf());
     this.setState({
-      time: this.zeroPrefix(hh) + ":" + this.zeroPrefix(mm) + ":" + this.zeroPrefix(ss)
+      time: newTimeString
     });
   };
 

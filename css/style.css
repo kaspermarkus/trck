@@ -50,6 +50,9 @@
     padding-left: 25px;
 }
 
+.recordListingArea {
+    background-color: #fffffe;
+}
 .recordListingArea h3.date {
     font-size: 18px;
     margin-left: 25px;
@@ -61,8 +64,8 @@
 }
 
 .recordListingArea .listingEntry {
-    font-weight: bold;
     margin-left: 45px;
+    border-bottom: #d6b36e 1px solid;
 }
 
 .recordListingArea .listingEntry:hover {
@@ -75,8 +78,8 @@
 }
 
 .recordListingArea span.timediff {
-    color: #bb6a6a;
-    font-weight: 300;
+/*    color: #bb6a6a;
+    font-weight: 300;*/
 }
 
 .recordListingArea span.category {
