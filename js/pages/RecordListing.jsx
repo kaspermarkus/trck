@@ -6,6 +6,18 @@ import ListingEntry from '../components/ListingEntry';
 import moment from 'moment'
 
 
+var Header = React.createClass({
+  render: function () {
+    return (
+       <tr>
+        <td colSpan="3" className={this.props.className}>{this.props.text}</td>
+      </tr>
+
+    );
+  }
+});
+
+
 var RecordListing = React.createClass({
   renderAll: function () {
     var toRender = [];
@@ -18,16 +30,16 @@ var RecordListing = React.createClass({
       var items = [];
       var date = moment(key, "x");
 
-      if (lastDate && date.year() != lastDate.year()) {
-        items.push(<h1 className="year">{date.year()}</h1>);
-      }
+      // if (lastDate && date.year() != lastDate.year()) {
+      //   items.push(<h1 className="year">{date.year()}</h1>);
+      // }
 
-      if (!lastDate || date.month() != lastDate.month()) {
-        items.push(<h2 className="month">{date.format("MMMM")}</h2>);
+      if (!lastDate || date.month() != lastDate.month() || date.year() != lastDate.year()) {
+        items.push(<Header className="month" text={date.format("MMMM YYYY")} />);
       }
 
       if (!lastDate || date.date() != lastDate.date()) {
-        items.push(<h3 className="date">{date.format("dddd, D MMMM, YYYY")}</h3>);
+        items.push(<Header className="date" text={date.format("dddd, D MMMM, YYYY")} />);
       }
 
       items.push(<ListingEntry recordKey={key} entry={records[key]} onEditEntry={this.handleEditEntry} />);
@@ -35,6 +47,12 @@ var RecordListing = React.createClass({
       return items;
     });
     return arr;
+  },
+
+
+
+  header: function (className, text) {
+
   },
 
   handleEditEntry: function (recordId) {
@@ -46,7 +64,9 @@ var RecordListing = React.createClass({
     var remainingKeys = Object.keys(records).sort((a,b) => a - b);
     return (
       <div className="recordListingArea container-fluid">
-        {this.renderAll()}
+        <table>
+          {this.renderAll()}
+        </table>
       </div>
     );
   }

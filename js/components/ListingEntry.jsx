@@ -33,14 +33,19 @@ export default React.createClass({
 
   render: function () {
     return (
-      <div className="listingEntry container-fluid">
-        <span className="editButton glyphicon glyphicon-edit" aria-hidden="true" onClick={() => this.props.onEditEntry(this.props.recordKey)}></span>
-
-        {this.renderTime()}
-        {this.renderDiff(this.props.entry.startTime, this.props.entry.endTime)}:
-        {this.ppCategory()}
-        <span className="description">: {this.props.entry.description}</span>
-      </div>
+      <tr className="listingEntry">
+        <td className="timeCell">
+          {this.renderTime()}
+          {this.renderDiff(this.props.entry.startTime, this.props.entry.endTime)}
+        </td>
+        <td className="descriptionCell">
+          {this.ppCategory()}:
+          <span className="description"> {this.props.entry.description}</span>
+        </td>
+        <td>
+          <span className="editButton glyphicon glyphicon-edit" aria-hidden="true" onClick={() => this.props.onEditEntry(this.props.recordKey)}></span>
+        </td>
+      </tr>
     );
   }
 });

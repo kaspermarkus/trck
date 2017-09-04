@@ -51,8 +51,19 @@
 }
 
 .recordListingArea {
-    background-color: #fffffe;
 }
+
+.recordListingArea table {
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-color: #fdfdf9;
+    border-collapse: separate !important;
+    font-size: 12px;
+    width: 100%;
+}
+
+
+
 .recordListingArea h3.date {
     font-size: 18px;
     margin-left: 25px;
@@ -63,18 +74,42 @@
     font-weight: 800;
 }
 
-.recordListingArea .listingEntry {
+.recordListingArea .listingEntry:hover {
+    background-color: #fAfAf3;
+}
+
+.recordListingArea .listingEntry td {
     margin-left: 45px;
     border-bottom: #d6b36e 1px solid;
 }
 
-.recordListingArea .listingEntry:hover {
-    background-color: #EEFFEE;
+.recordListingArea .listingEntry td.timeCell {
+    width: 130px;
+    border-right: 2px solid #84848a;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+.recordListingArea td.date {
+    border-bottom: 2px solid #84848a;
+    margin-top: 10px;
+    padding-top: 5px;
+    font-weight: 500;
+    padding-left: 5px;}
+
+.recordListingArea td.month {
+    background-color: #84848a;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: right;
+    padding-right: 10px;
+    color: #FFF;
+        border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 .recordListingArea span.timerange {
     padding-right: 5px;
-    color: #444;
+    /*color: #444;*/
 }
 
 .recordListingArea span.timediff {
