@@ -7,7 +7,7 @@ import fs from 'fs';
 import {ipcRenderer} from 'electron';
 import {nativeImage} from 'electron';
 import utils from '../Utils'
-var canvasBuffer = require('electron-canvas-to-buffer')
+// var canvasBuffer = require('electron-canvas-to-buffer')
 
 import moment from 'moment'
 import Tab from "../components/Tab";
